@@ -14,7 +14,7 @@
     //number1, number2 are parameters
     let result = number1 + number2;
     return result;
-
+  };
 // 
 
 
