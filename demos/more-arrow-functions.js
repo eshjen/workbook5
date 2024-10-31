@@ -66,24 +66,13 @@ let prog200Course = courses.find((course) => {
 //after you get the object back, use dot notation to get to specific properties and print them out to the screen
 console.log(prog200Course.StartDate);
 
-
-
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------------------
 // 2.  What is the title of the PROJ500 course?
-function isPROJ500(course) {
-  return course.CourseId === "PROJ500";
-}
+// function isPROJ500(course) {
+//   return course.CourseId === "PROJ500";
+// }
 
-let proj500Course = courses.find(isPROJ500);
+let proj500Course = courses.find((course) => course.CourseId === "PROJ500");
 console.log(proj500Course.Title);
 
 //------------------------------------------------------------------------
@@ -97,8 +86,11 @@ function isInexpensive(course) {
 //declare a variable to hold an array of objects that meet the comparison
 //assign (=) into that array the return value of the filter function
 //call the filter function on the array and pass it the comparison function as the single parameter
-let inexpensiveCourseTitles = courses.filter(isInexpensive);
+let inexpensiveCourseTitles = courses.filter( (course) => Number(course.Fee) <= 50);
 console.log("Inexpensive course list: ", inexpensiveCourseTitles);
 
 //------------------------------------------------------------------------
 //4. What classes meet in "Classroom 1"?
+
+let classroom1 = courses.filter( (course) =>(course.Location)=== "Classroom 1");
+return (courses.Location);
